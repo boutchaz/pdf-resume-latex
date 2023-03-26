@@ -1,0 +1,216 @@
+\documentclass[]{resume-openfont}
+\usepackage{xcolor}
+\pagestyle{fancy}
+\resetHeaderAndFooter
+
+%--------------------------------------------------------------
+% Convenience command - make it easy to fill template
+
+% Create job position command. Parameters: company, position, location, when
+\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | \bf{\large#2}}\hfill\location{{\small#3} | #4}\fakeNewLine}
+
+\newcommand{\skillHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
+% Create education heading. Parameters: Name, degree, location, when
+\newcommand{\educationHeading}[4]{\runsubsection{#1}\hspace*{\fill}  \location{#3 | #4}\\
+\descript{#2}\fakeNewLine}
+
+% Create project heading. Parameters: Name, link, Tech stack
+\newcommand{\projectHeading}[3]{\Project{#1}{#2}
+\descript{#3}\\}
+% Create technical heading. Parameters: Name, linkhttps://www.overleaf.com/project/62376736572c2074d6ffa582
+\newcommand{\technicalHeading}[2]{\Project{#1}{#2}\\}
+\newcommand{\projectHeadingWithDate}[4]{\Project{#1}{#2}
+\descript{#3 | #4}\\}
+\newcommand{\skillReference}[2]{\uppercase { \href{#1}{\underline{\textbf{#2}}}}}
+% Parameters: courses
+\newcommand{\courseWork}[1]{\textbf{Coursework:} #1}
+
+% Parameters: courses
+\newcommand{\teacherAssistant}[1]{\textbf{Teacher Assistant (TA):} #1}
+
+\definecolor{rolecolor}{RGB}{61, 90, 128}
+ 
+%--------------------------------------------------------------
+\begin{document}
+
+%--------------------------------------------------------------
+%     Profile
+%--------------------------------------------------------------
+\newcommand{\yourName}{Boutchamir Zakaria}
+% How you want it to show up on the resume
+\newcommand{\yourWebsite}{www.boutchaz.dev}
+% vs how you want it to show up. If it's the same you can just replace "\yourWebsiteLink" with "yourWebsite"
+\newcommand{\yourWebsiteLink}{https://boutchaz.dev}
+\newcommand{\yourEmail}{zakaria.boutchamir@gmail.com}
+\newcommand{\yourPhone}{\underline{+212691870293}}
+\newcommand{\githubUserName}{boutchaz}
+\newcommand{\linkedInUserName}{boutchaz}
+\newcommand{\Role}{Senior Engineer}
+% An alternate profile section 
+% \alignProfileTable
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%     \ralewayBold{\href{\yourWebsiteLink}{\Large \yourName}} & 
+%     Email : \href{mailto:\yourEmail}{\yourEmail}
+%     \\
+%     \href{https://github.com/\githubUserName}{GitHub://\githubUserName} & 
+%     Mobile : \yourPhone
+%     \\
+%     \href{https://www.linkedin.com/in/\linkedInUserName}{LinkedIn://\linkedInUserName} & Website : \href{\yourWebsiteLink}{\yourWebsite}
+%     \\
+% \end{tabular*}
+
+\begin{center}
+    \Huge \scshape \latoRegular{\yourName} \\ \vspace{1pt}
+    \begin{center}
+     \color{rolecolor}\large \scshape \latoRegular{\Role} 
+    \end{center}
+    \small \href{mailto:\yourEmail}{\underline{\yourEmail}}  $|$  \yourPhone $|$ 
+    \href{https://www.linkedin.com/in/\linkedInUserName}{\underline{linkedIn/boutchaz}} $|$
+    \href{https://github.com/\githubUserName}{\underline{github/\githubUserName}} 
+    | \href{\yourWebsiteLink}{\underline{\yourWebsite}} 
+\end{center}
+%--------------------------------------------------------------
+%     Experience
+%--------------------------------------------------------------
+\section{Professional Experience}
+\vspace{15pt}
+\resumeHeading{Swibeco }{Senior Full Stack JS Developer}{Remote}{July 2021 – Current}
+\vspace{10pt}
+\begin{bullets}
+\item Participated in the maintenance of company's v1 e-commerce platform built with \skillReference{https://angularjs.org/}{Angularjs}.
+\item Reviewed designs created by designers to ensure they are functional and meet usability standards.
+\item Migrate       e-commerce platform to v2 using \skillReference{https://reactjs.org/}{Reactjs},\skillReference{https://www.typescriptlang.org/}{Typescript},  and \skillReference{https://react-hook-form.com/}{React-hook-form}.  
+\item Conducted an in-depth study of various solution options and evaluated their potential to meet project requirements. Designed and developed a feature toggle system with a gradual rollout capability to ensure minimal impact on end-users during the deployment of new features. the team was able to significantly improve the speed and reliability of the software delivery process while maintaining a high level of quality.
+
+\end{bullets}
+\vspace{15pt}
+\resumeHeading{4D Logiciel | Relevant}{Senior Full Stack JS Developer}{Remote}{Feb 2021 – July 2022}
+\vspace{10pt}
+\begin{bullets}
+    \item Designed the system with a non-functional parameter in view, such as configuration, logging,
+    parameterization.
+    \item Conceived a generic module that renders ui forms and widgets from json served from backend using server side rendering using \skillReference{https://nextjs.org/}{Nextjs},\skillReference{https://www.typescriptlang.org/}{Typescript},  and \skillReference{https://react-hook-form.com/}{React-hook-form}.  
+    %  \item Here is another bullet that I might choose to uncomment for some jobs
+    \item Introduced testing for every layer of  the project by adding unit testing using \skillReference{https://jestjs.io/}{Jest} and \skillReference{https://testing-library.com/}{react-testing-library},  \skillReference{https://www.cypress.io/}{cypress} for e2e tests and  \skillReference{https://www.npmjs.com/package/newman}{newman} for api testing. and forced a threshold of 70 \% (code coverage).
+    \item Streamlined CI/CD using \skillReference{https://docs.gitlab.com/ee/ci/index.html}{gitlab-ci/cd} to perform build and run test and security audits  checks for continuous integrations and deploy after successful integration in correspondent environments for continuous delivery.
+    \item Ensure code quality by implementing code review process and introducing PR \skillReference{https://docs.gitlab.com/ee/user/project/description_templates.html}{templates} and \skillReference{https://typicode.github.io/husky}{hooks} in local development environments for running tests and static code analysis.
+    \item Make design decisions to help team focus on development.
+  
+\end{bullets}
+\vspace{15pt}
+\resumeHeading{4D Logiciel | CareerCard}{Senior Full Stack JS Developer}{Remote}{Feb 2021 – July 2022}
+\vspace{10pt}
+\begin{bullets}
+    \item Assessed and Created a subscription module using \skillReference{https://stripe.com/en-gb-us}{stripe}, \skillReference{https://expressjs.com/}{expressjs} and \skillReference{https://www.mongodb.com/}{mongodb} that supports plan upgrade/downgrade and unsubscription.
+    \item Migrated Mobile Application core \skillReference{https://reactnative.dev/}{react native} from 
+    62 to 67 using the \skillReference{https://react-native-community.github.io/upgrade-helper/}{upgrade helper}.
+    \item  Refactored the existing codebase based on best practices.
+    \item  remade web back-office to be full responsive,ergonomic and user friendly using \skillReference{https://chakra-ui.com/}{chakraui}.
+    
+    \vspace{15pt}
+\end{bullets}
+\resumeHeading{4D Logiciel |Dashboard}{Senior Full Stack JS Developer}{Remote}{Feb 2021 – July 2022}
+\vspace{10pt}
+\begin{bullets}
+    \item Prepared the architecture for the web cloud dashboard application using \skillReference{https://vuejs.org/}{VueJS},\skillReference{https://nextjs.org/}{aws amplify}, and set up the ci/cd for the stack,
+    we used \skillReference{https://aws.amazon.com/amplify/}{cognito} for managing authentication and 
+    \skillReference{https://aws.amazon.com/amplify/}{appsync} as api interface to take advantage of types codegen since we use \skillReference{https://aws.amazon.com/amplify/}{typescript} in the frontend app.
+    \item Created and Authored API’s for backend Services for the mvp.
+    \item Integrated lambda functions to add more customisation and implement extra logic to appsync.
+    \item Assisted in testing and support of the application.
+   
+\vspace{15pt}
+\end{bullets}
+\resumeHeading{4D Logiciel | Eldermark}{Full Stack JS Developer}{Remote}{May 2020 – FEB 2021}
+\vspace{10pt}
+\begin{bullets}
+    \item Designed and implemented a generic api test generator using \skillReference{https://expressjs.com/}{expressjs} and \skillReference{https://www.npmjs.com/package/http-proxy-middleware}{http proxy middlewares} that will proxy api requests incoming from end clients to the server and will write test from \skillReference{https://mozilla.github.io/nunjucks/}{nunjacks templates} with javascript extension that will be run  \skillReference{https://mochajs.org/}{mocka} and \skillReference{https://www.chaijs.com/}{chai} 
+    \item Developed a Connector using typescript to consume \skillReference{https://developer.4d.com/docs/fr/REST/gettingStarted.html}{4D rest} engine and replace the native datastore object provided by \skillReference{https://wakanda.github.io/}{wakandaJS} .
+    \item Changed all the codebase within \skillReference{https://wakanda.github.io/}{wakandaJS} that rely heavily on the \skillReference{https://wakanda.github.io/api-reference/interfaces/datastoreclass.html}{synchronous datastore} with asynchronous code using  the connector.
+    \item Replaced the \skillReference{https://wakanda.github.io/api-reference/interfaces/wakstorage.html}{synchrounous storage} with a asynchronous system that uses \skillReference{https://redis.io/}{redis} for cashing.
+    \item Migrate Graphql architecture to nodejs from wakanda and converted all resolvers to be asynchronous.
+\vspace{15pt}
+\end{bullets}
+\resumeHeading{4D Logiciel | 4D discuss Discourse
+}{Full Stack Developer}{On-Site}{JAN 2020 – MAY 2020}
+\vspace{10pt}
+\begin{bullets}
+    \item To lower maintenance costs and coding a new version for \skillReference{https://forums.4d.com/MyHome/EN}{4d forum} I was in charge of doing a benchmark study of different saas products alternatives,one of  the candidates I suggested was adopted for several reasons(features/pricing) is  \skillReference{https://forums.4d.com/MyHome/EN}{discourse}
+    \item Once the solution is chosen the purchased plan didn't include the migration I took in charge migration process. mapping all the properties of existing data with discourse model. using nodejs scripts for reading the exported csvs I processed data and adapt it to be used later in discourse data insertion.
+    \item Followed the \skillReference{https://meta.discourse.org/t/beginners-guide-to-install-discourse-on-macos-for-development/15772}{guide of installtion} I setup my local environnement to execute my data insertion using  \skillReference{https://docs.discourse.org/}{discourse rest api} the migration should include all languages and  keep user experience seamless by keeping the same accounts and notifying active members with the new portal \skillReference{https://discuss.4d.com/}{4d discuss}
+\vspace{15pt}
+\end{bullets}
+\resumeHeading{4D Logiciel | TAOW}{Full Stack JS Developer}{On-Site}{Nov 2020 – JAN 2020}
+\begin{bullets}
+    \item Animated technical workshops on how to use \skillReference{https://github.com/react-boilerplate/react-boilerplate}{react boilerplate}. the boilerplate offers a lot of tools out of the box such as Internalization,Seo and a predictable state management using redux and redux-saga.
+    \item Design and Architecture proof of concept  integration of React in 4D Ecosystem
+\vspace{15pt}
+\end{bullets}
+\resumeHeading{4D Logiciel | 4D Projects}{Full Stack JS Developer}{On-Site}{Jun 2019 – Nov 2020}
+\begin{bullets}
+    \item 4D Professional Services is one of the most important services of 4D Corporate
+    the rise of a tool to centralize the saas products used internally by 4D \skillReference{https://www.zoho.com/crm/}{zoho crm} to manage client relationship (leads/sales ...) and \skillReference{https://www.zoho.com/projects/}{zoho projects} as tool for project management. 4D projects is a home made tool that uses rest ap exposed by both services to give a global view both in timeline and in process of different aspects such as project validation,resources evaluation,automated tasks,
+    reporting.
+       \item I choosed the \skillReference{https://en.wikipedia.org/wiki/MEAN_(solution_stack)}{mean} mongoDB as database,express as nodeJS framework for backend code, \skillReference{https://angular.io/}{Angular} as frontend framework and nodejs as the application runtime of the application
+    
+    \vspace{15pt}
+\end{bullets}
+\sectionsep
+\resumeHeading{SQLI | GROUPE SEB}{Junior Front end  Developer}{On-Site}{JUN 2018 – JUN 2019}
+\begin{bullets}
+    \item Due to the heavy turnover in SQLI Corporate I was lucky enough to take full charge of redesigning and implementing the new checkout process for the mojority of
+    \skillReference{https://www.groupeseb.com/en/our-brands}{seb storefront websites} like rowenta,calor,tefal,krups...
+    \item Since the majority of the websites were included in the redesign the estimation of the work didn't met the client deadlines since I was the only front end developer staffed on the project. To reduce the amount of work I used 
+    sap hybris storefront addons.By doing so I reduced the time by implementing the layout,styling and javascript as much global and generic as possible in the addon that will generate at build time code inside each storefront(company website) after that I add customization for each website in the correspondent storefront.Since the project was using JSPs(SSR) most styling and javascript code was written using saas and jQuery.
+    
+\end{bullets}
+\sectionsep
+
+
+
+
+%--------------------------------------------------------------
+%     Skills
+%--------------------------------------------------------------
+\section{skills}
+\begin{tabular}{p{11em} p{1em} p{43em}}
+    \textbf{Languages} & &    Javascript/Typescript,LaTeX,MarkDown.  \\
+    \textbf{Web Framework} & & Vuejs, Angular 2/11,ReactJS,NextJS,NestJS,ExpressJS,GatsbyJS \\
+    \textbf{Styling/UI frameworks} & &    CSS,SASS,Less,Styled Components,ChakraUi,Tailwindcss,MUI \\
+    \textbf{DataBases} & &    MongoDB,DynamoDB,Mysql,PostgreSQL.(RestfulAPI,GraphQL).\\
+    \textbf{Testing Frameworks} & &    Jest, Jasmine/Karma, cypress, mocha/chai. \\
+    \textbf{Mobile} & &  React Native \\
+    \textbf{Devops} & &  Nginx , Docker, Gitlab Ci. \\
+    \textbf{Cloud} & &  AWS Amplify,Netlify,Heroku. \\
+    \textbf{Versionning} & &  Git \\
+    \textbf{Communication} & &          English, French, Arab
+\end{tabular}
+\sectionsep
+
+\newpage
+%--------------------------------------------------------------
+%     Description
+%--------------------------------------------------------------
+\section{About me}
+% Put school first and degree second if your school is reputable
+
+Raised in Settat, I moved to my birthplace of El Jadida to pursue my interest in computer science at the National School of Applied
+Sciences, where I specialized in IT System Engineering. I’m now based in Rabat.A JavaScript enthusiast, as well as, articulate
+analytical software engineer; specialized in app development, with a result-driven and customer-focused modi operandi. Also, a
+vigorous and supportive partner; committed to streamlining processes and efficiently contributing in all project phases.
+% \courseWork{Data Structures and Algorithms; Operating Systems;  Computer Security; Software Testing; Advanced Networking; Big Data Analytics}
+\sectionsep
+
+
+%--------------------------------------------------------------
+%     Education
+%--------------------------------------------------------------
+\section{Education}
+% Put school first and degree second if your school is reputable
+\educationHeading{IT engineering diploma}{National school of applied sciences }{ ELJadida, Morocco}{2018}
+
+\sectionsep
+
+
+  
+\end{document}

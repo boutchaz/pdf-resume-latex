@@ -1,0 +1,15 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "I'm using ubunutu as an operating system. If you want to enable latex support you need to install :     * texlive-full : TeX Live is a TeX distribution to get up and running with the TeX document production system. To install it, once you're in the terminal, enter the following command:         ```bash         sudo apt-get install texlive-full         ```",
+  "main": "index.js",
+  "scripts": {
+    "compile": "xelatex resume.tex",
+    "dev": "nodemon --watch resume.tex --exec npm run compile"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
